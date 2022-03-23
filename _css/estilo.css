@@ -1,0 +1,84 @@
+.link {
+    background-color: #222222;
+    color: rgb(90, 88, 88);
+
+    -background-color: #1976D2;
+    -border-color: #1976D2;
+    -color: white;
+}
+
+.listaBTN {
+    margin-top: 100px;
+
+    -background-color: #1976D2;
+    -border-color: #1976D2;
+    -color: white;
+}
+
+
+
+.dropp{
+width: 150px;
+margin-right: 0px;
+}
+
+.corpo {
+    margin-top: 30px;
+}
+
+.hea {
+    -background-color: #2196F3;
+    height: 150px;
+    -color:white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.664);
+}
+
+.imgTOP {
+    margin-left: 50px;
+    width: 0px;
+    height: 0px;
+}
+
+header{
+    margin-top: 150px;;
+}
+
+.imgTOP2 {
+    margin-left: 0px;
+    margin-top: 8px;
+    width: 0px;
+    height: 0px;
+}
+
+footer {
+    background-color: #1976D2;
+    color: #64B5F6;
+    position: fixed;
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+}
+
+
+.sou {
+    margin-top: 50px;
+}
+
+.lss{
+    color: white
+}
+
+#txtEntrada{
+    display: none;
+}
+
+#txtSaida{
+    display: none;
+}
+
+.imm{
+    color: #1976D2;
+    background-color: white;
+    padding: 5px;
+}
+

@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>SouCrypt</title>
+	<link rel="stylesheet" href="_css/bootstrap.css">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<style>
+.by2 {
+    background: url("_img/002.jpg") no-repeat right fixed;
+}
+.by1 {
+    background: url("_img/001.jpg") no-repeat right fixed;
+}
+.by3 {
+    background: url("_img/003.jpg") no-repeat right fixed;
+}
+	</style>
+
+</head>
+
+<body class="by2">
+
+	<!-- HEADER -->
+	<header>
+		<div class="container-fluid">
+
+			  <nav class="navbar  navbar-fixed-top hea navbar-inverse" >
+				<div class="container-fluid">
+					
+				  <div class="navbar-header">
+					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+
+					<div class="imgTOP visible-lg visible-md">
+						<img src="_img/logotipo2.png">
+					</div>
+		
+					<div class="imgTOP visible-sm">
+						<img src="_img/logotipo2.png" width="480">
+					</div>
+			
+				  </div>
+			  
+
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					
+					<ul class="nav navbar-nav navbar-right listaBTN">
+						
+					  <li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SouCript <span class="caret"></span></a>
+						  
+						  <ul class="dropdown-menu link" style="padding: 5px; ">
+								<table>
+									<tr>
+										<td><img src="_img/ico/start.png">&nbsp;&nbsp;</td>
+										<td><input type="checkbox" id="start"> <label for="start">Estado</label></td>
+									</tr>
+									<tr>
+										<td><img src="_img/ico/add.png"></td>
+										<td><input type="radio" name="rad" id="criptografar" checked> <label
+												for="criptografar">Criptografar</label></td>
+									</tr>
+									</tr>
+									<tr>
+										<td><img src="_img/ico/decript.png"></td>
+										<td><input type="radio" name="rad" id="descriptografar"> <label
+												for="descriptografar">Descriptografar</label></td>
+									</tr>
+									<tr>
+										<td><img src="_img/ico/save.png"></td>
+										<td class="btn">Salvar</td>
+									</tr>
+									<tr>
+										<td><img src="_img/ico/delete.png"></td>
+										<td class="btn" id="btnLimpar">Limpar</td>
+									</tr>
+									<tr>
+										<td><img src="_img/ico/out.png"></td>
+										<td class="btn" data-toggle="modal" data-target="#modal_sair">Sair</td>
+									</tr>
+								</table>
+							</ul>
+						</li>
+
+						<li><a href="" data-toggle="modal" data-target="#modal_fundo">Fundo</a></li>
+						
+						<li><a href="" data-toggle="modal" data-target="#modal_info">Informações</a></li>
+					</ul>
+
+				  </div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			  </nav>
+
+			
+
+		</div>
+
+	</header>
+
+	<!-- BODY -->
+
+	<div class="container">
+
+		<div class="corpo row">
+			<div class="entrada col-md-6 col-sm-6 col-xs-6 caixa">
+				<textarea class="form-control" id="txtEntrada" cols="30" rows="20"
+					placeholder="Insira o Texto que Deseja Criptografar"></textarea>
+			</div>
+			<div class="saida col-md-6 col-sm-6 col-xs-6 caixa">
+				<textarea class="form-control" id="txtSaida" cols="30" rows="20"
+					placeholder="Aqui terá o Texto Descriptografado" readonly></textarea>
+			</div>
+		</div>
+
+	</div>
+
+<!-- Modal Fundo -->
+<div class="modal fade" id="modal_fundo">
+	<div class="modal-dialog row">
+
+			<div class="imm">
+				<img width="590px" src="_img/001.jpg" class="img-responsive"><input type="radio" name="rimage" id="f1" onclick="iman()"> <label for="f1">Fundo 1</label>
+			</div><br>
+			
+			<div class="imm">
+				<img width="590px" src="_img/002.jpg" class="img-responsive"><input type="radio" name="rimage" id="f2" onclick="iman()" checked> <label for="f2">Fundo 2</label>
+			</div><br>
+			
+			<div class="imm">
+				<img width="590px" src="_img/003.jpg" class="img-responsive"><input type="radio" name="rimage" id="f3" onclick="iman()"> <label for="f3">Fundo 3</label>
+			</div>
+
+	</div>
+</div>
+	<!-- Modal Info-->
+	<div class="modal fade" id="modal_info">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #2196F3;">
+					<a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+					<h4 class="modal-title" id="myModalLabel">INFORMAÇÕES</h4>
+				</div>
+				<div class="modal-body" style="background-color: #0A626E; color:white">
+					<p>
+						<strong>SouCrypt</strong> é uma ferramente de criptografar texto, fazendo com
+						que o texte nele criptografado só seja descriptografado nele mesmo, e simples de utilizar
+					</p>
+					<p>O SouCript foi desenvolvida pela SouSOFT por Eng: Manuel Bunga Honoré de Sousa.</p>
+					<p>
+						Contacto:<br>
+						Tel: 938308215 / 915138890 <br>
+						Facebook: Manuel Honoré de Sousa
+					</p>
+
+				</div>
+				<div style="padding: 5px; text-align: end; background-color: #0A626E;">
+					<a class="btn btn-primary" data-dismiss="modal">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Sair-->
+	<div class="modal fade" id="modal_sair">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #2196F3">
+					<a class="close" data-dismiss="modal"><span>&times;</span></a>
+					<h4 class="modal-title">SAIR</h4>
+				</div>
+				<div class="modal-body" style="background-color: #0A626E; color:white">
+					<h4>Deseja sair do SouCrypt?</h4>
+				</div>
+				<div style="padding: 5px; text-align: end; background-color: #0A626E;">
+					<a class="btn btn-default" data-dismiss="modal">Não</a>
+					<a class="btn btn-primary" onclick="sair()" id="win">Sim</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<center>
+			&copy;<strong>SouSOFT</strong>
+		</center>
+	</footer>
+	<script src="_js/jQuery.js"></script>
+	<script src="_js/bootstrap.js"></script>
+	<script src="_js/jscript.js"></script>
+</body>
+
+
+</html>
